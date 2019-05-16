@@ -23,8 +23,18 @@
                         <button width="1" alignment="left" title="Button" id="wqX-pb-R5u"/>
                         <button width="1" alignment="left" title="Button" id="aka-He-F9r"/>
                     </items>
+                    <connections>
+                        <segue destination="8oq-gg-OBV" kind="relationship" relationship="nextPage" id="Tjz-hh-4i8"/>
+                    </connections>
                 </controller>
             </objects>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="67c-9b-xKd">
+            <objects>
+                <controller id="8oq-gg-OBV"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="31"/>
         </scene>
     </scenes>
 </document>
