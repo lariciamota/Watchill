@@ -13,8 +13,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(x))
+        view.addGestureRecognizer(tap)
+    
+        
+    }
+    
+    @objc func x(){
+        print("b")
     }
 
-
+    @IBAction func acessarContatos(_ sender: UIButton) {
+        
+        print("a")
+        
+    }
+    
 }
 
