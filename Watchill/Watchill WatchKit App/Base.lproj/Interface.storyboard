@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,31 +10,54 @@
     </dependencies>
     <scenes>
         <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <scene sceneID="xuB-gW-33i">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Watchill_WatchKit_App" customModuleProvider="target">
+                <controller id="5cD-u1-UT0">
                     <items>
-                        <button width="136" alignment="left" title="Button" id="e2N-cn-Atp"/>
-                        <button width="136" alignment="left" title="Button" id="BII-k1-aqm"/>
-                        <movie width="1" height="100" alignment="left" id="LrF-ws-4wE"/>
-                        <nowPlayingView alignment="left" id="WHh-E3-xeZ"/>
-                        <button width="1" alignment="left" title="Button" id="aoW-4q-w2R"/>
-                        <button width="1" alignment="left" title="Button" id="dz6-yD-ZDo"/>
-                        <button width="1" alignment="left" title="Button" id="wqX-pb-R5u"/>
-                        <button width="1" alignment="left" title="Button" id="aka-He-F9r"/>
+                        <label width="136" height="21" alignment="left" text="Watchill" textAlignment="center" id="35Q-XC-ckt">
+                            <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                        </label>
+                        <label width="136" height="25" alignment="left" text="Precisa de ajuda?" textAlignment="center" id="cTI-WT-Gx5">
+                            <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                        <button width="1" alignment="left" title="Sim" id="auV-FN-eeZ">
+                            <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="AYe-6T-ycL" kind="push" id="pNg-Ub-5br"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Não" id="bwc-y4-zSp">
+                            <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.35685837269999998" green="0.51165837049999996" blue="0.63923329110000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </button>
                     </items>
-                    <connections>
-                        <segue destination="8oq-gg-OBV" kind="relationship" relationship="nextPage" id="Tjz-hh-4i8"/>
-                    </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="60" y="50"/>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="67c-9b-xKd">
+        <scene sceneID="Fhv-ge-eoC">
             <objects>
-                <controller id="8oq-gg-OBV"/>
+                <controller id="AYe-6T-ycL">
+                    <items>
+                        <label width="136" height="45" alignment="left" text="O que voce gostaria de fazer?" textAlignment="center" numberOfLines="2" id="lwv-L4-xse">
+                            <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <button width="1" alignment="left" title="Ligar" id="5Ew-Q0-3WX">
+                            <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </button>
+                        <button width="1" alignment="left" title="Musica" id="2ej-GB-f6n">
+                            <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.35685837269999998" green="0.51165837049999996" blue="0.63923329110000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </button>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="356" y="31"/>
+            <point key="canvasLocation" x="346" y="50"/>
         </scene>
     </scenes>
 </document>
