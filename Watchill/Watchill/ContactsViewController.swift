@@ -63,7 +63,9 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var contacts: [Int: [Contact]] = [:] {
         didSet {
-            contactsTableView.reloadData()
+            DispatchQueue.main.async {
+                self.contactsTableView.reloadData()
+            }
         }
     }
     
@@ -85,7 +87,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
             newContacts[index] = []
         }
         contacts = newContacts
-        
+
         fetchContacts()
     }
     

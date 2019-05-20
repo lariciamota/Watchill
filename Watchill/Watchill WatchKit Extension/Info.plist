@@ -20,6 +20,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Precisamos de acesso para adicionar seus contatos queridos</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
