@@ -26,6 +26,7 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
         navigationItem.leftBarButtonItem = editButton
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(adding))
         navigationItem.rightBarButtonItem = addButton
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

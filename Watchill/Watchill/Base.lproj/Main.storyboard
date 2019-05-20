@@ -40,11 +40,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTE-b9-U6w">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkz-6i-glH" userLabel="BreathButton">
-                                                <rect key="frame" x="58" y="0.0" width="255" height="255"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="QueroMorrer"/>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbi-wQ-m7c" userLabel="PlayButton">
                                                 <rect key="frame" x="147" y="450" width="80" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -75,6 +70,11 @@
                                                 <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkz-6i-glH" userLabel="BreathButton">
+                                                <rect key="frame" x="87" y="41" width="200" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="logo"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </view>
@@ -284,9 +284,9 @@
     </scenes>
     <resources>
         <image name="Phone" width="100" height="100"/>
-        <image name="QueroMorrer" width="665" height="660"/>
         <image name="icons8-fast-forward-64" width="64" height="64"/>
         <image name="icons8-play-button-circled-100" width="100" height="100"/>
         <image name="icons8-rewind-64" width="64" height="64"/>
+        <image name="logo" width="216" height="230"/>
     </resources>
 </document>
