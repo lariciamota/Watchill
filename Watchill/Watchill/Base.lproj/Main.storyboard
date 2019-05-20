@@ -49,7 +49,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Phone.png"/>
                                                 <connections>
-                                                    <segue destination="nnd-XP-XXQ" kind="show" id="SVf-4H-PWz"/>
+                                                    <segue destination="nnd-XP-XXQ" kind="show" id="m0k-oN-IPJ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MusicNow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-ZP-mxV">
@@ -89,20 +89,20 @@
             </objects>
             <point key="canvasLocation" x="146" y="-1084"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Contacts View Controller-->
         <scene sceneID="VYd-55-brW">
             <objects>
-                <viewController id="nnd-XP-XXQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" id="nnd-XP-XXQ" customClass="FavoriteContactsViewController" customModule="Watchill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kjb-jS-hIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="juc-XC-KOG">
-                                <rect key="frame" x="0.0" y="39" width="375" height="517"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="92" id="VoT-Xx-fYu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="92" id="VoT-Xx-fYu" customClass="FavoriteTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VoT-Xx-fYu" id="Us2-lL-IEy">
@@ -127,6 +127,9 @@
                                                     <rect key="frame" x="318" y="29" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="Phone"/>
+                                                    <connections>
+                                                        <action selector="callContact:" destination="VoT-Xx-fYu" eventType="touchUpInside" id="WBb-Gx-zN0"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contato de Emergencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-Oq-K86">
                                                     <rect key="frame" x="15" y="58" width="142" height="16"/>
@@ -138,8 +141,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="tah-Em-ZLS" id="peh-gP-YTv"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="P2o-M1-z0b">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherFavoritesTableViewCell" rowHeight="76" id="P2o-M1-z0b" customClass="OtherFavoritesTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P2o-M1-z0b" id="lTs-pl-GzB">
@@ -164,46 +170,53 @@
                                                     <rect key="frame" x="326" y="20" width="34" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="Phone"/>
+                                                    <connections>
+                                                        <action selector="callContact:" destination="P2o-M1-z0b" eventType="touchUpInside" id="FCr-Z0-Vyw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="4yR-mA-u4H" id="15H-Db-0wy"/>
+                                            <outlet property="phoneLabel" destination="0Dl-rY-wkg" id="IM0-Ki-1WG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="nmX-K0-VLs" firstAttribute="bottom" secondItem="juc-XC-KOG" secondAttribute="bottom" constant="111" id="ZWB-Xe-yTy"/>
-                            <constraint firstItem="juc-XC-KOG" firstAttribute="leading" secondItem="nmX-K0-VLs" secondAttribute="leading" id="bYw-O9-WSI"/>
-                            <constraint firstItem="juc-XC-KOG" firstAttribute="top" secondItem="nmX-K0-VLs" secondAttribute="top" constant="19" id="m7Y-sw-M1n"/>
-                            <constraint firstItem="nmX-K0-VLs" firstAttribute="trailing" secondItem="juc-XC-KOG" secondAttribute="trailing" id="zpr-9h-tZe"/>
+                            <constraint firstItem="nmX-K0-VLs" firstAttribute="trailing" secondItem="juc-XC-KOG" secondAttribute="trailing" id="2z4-MR-M1M"/>
+                            <constraint firstItem="nmX-K0-VLs" firstAttribute="bottom" secondItem="juc-XC-KOG" secondAttribute="bottom" id="OUi-EK-3SD"/>
+                            <constraint firstItem="juc-XC-KOG" firstAttribute="top" secondItem="nmX-K0-VLs" secondAttribute="top" id="jqE-gc-8Wg"/>
+                            <constraint firstItem="juc-XC-KOG" firstAttribute="leading" secondItem="nmX-K0-VLs" secondAttribute="leading" id="kdx-Dw-Ve7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nmX-K0-VLs"/>
                     </view>
                     <connections>
-                        <segue destination="jHt-S4-DEd" kind="show" id="3dp-k5-ICd"/>
+                        <segue destination="jHt-S4-DEd" kind="show" identifier="ContactsViewController" id="3dp-k5-ICd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnk-qr-uWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="-1082"/>
+            <point key="canvasLocation" x="1260" y="-1082.608695652174"/>
         </scene>
-        <!--View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="OOd-uw-jnm">
             <objects>
-                <viewController id="jHt-S4-DEd" sceneMemberID="viewController">
+                <viewController id="jHt-S4-DEd" customClass="ContactsViewController" customModule="Watchill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4dn-Cm-iNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0yu-rG-dex">
-                                <rect key="frame" x="0.0" y="67" width="375" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="EiD-67-cBV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="70" id="EiD-67-cBV" customClass="ContactTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EiD-67-cBV" id="zfa-J3-tOr">
@@ -227,9 +240,20 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="TEU-0t-jsi" id="xlf-TE-k6p"/>
+                                            <outlet property="phoneLabel" destination="aT8-fV-xxG" id="TXh-7o-eT2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ddM-RU-yeS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Contatos" id="OwZ-jx-Mf1"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="2vt-kk-BXU"/>
@@ -237,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8g4-nA-BEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143" y="-1083"/>
+            <point key="canvasLocation" x="2141.5999999999999" y="-1083.5082458770617"/>
         </scene>
     </scenes>
     <resources>
