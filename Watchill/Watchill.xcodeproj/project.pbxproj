@@ -19,6 +19,8 @@
 		0D0480C02284696C000A2399 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0480BF2284696C000A2399 /* InterfaceController.swift */; };
 		0D0480C22284696C000A2399 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0480C12284696C000A2399 /* ExtensionDelegate.swift */; };
 		0D0480C42284696D000A2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0480C32284696D000A2399 /* Assets.xcassets */; };
+		580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DA2292C66C000C4E67 /* MusicProvider.swift */; };
+		580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DC2292C83A000C4E67 /* MusicPlayer.swift */; };
 		E83131A9228DB2660046542F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E83131A8228DB2660046542F /* Icons */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +83,8 @@
 		0D0480C12284696C000A2399 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		0D0480C32284696D000A2399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D0480C52284696D000A2399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		580063DA2292C66C000C4E67 /* MusicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
+		580063DC2292C83A000C4E67 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		E83131A8228DB2660046542F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = ../../../../Downloads/Icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +136,8 @@
 				0D0480A52284696B000A2399 /* LaunchScreen.storyboard */,
 				0D0480A82284696B000A2399 /* Info.plist */,
 				E83131A8228DB2660046542F /* Icons */,
+				580063DA2292C66C000C4E67 /* MusicProvider.swift */,
+				580063DC2292C83A000C4E67 /* MusicPlayer.swift */,
 			);
 			path = Watchill;
 			sourceTree = "<group>";
@@ -290,7 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */,
 				0D04809F2284696B000A2399 /* ViewController.swift in Sources */,
+				580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */,
 				0D04809D2284696B000A2399 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
