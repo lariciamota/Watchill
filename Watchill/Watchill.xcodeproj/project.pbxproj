@@ -21,7 +21,13 @@
 		0D0480C42284696D000A2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0480C32284696D000A2399 /* Assets.xcassets */; };
 		580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DA2292C66C000C4E67 /* MusicProvider.swift */; };
 		580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DC2292C83A000C4E67 /* MusicPlayer.swift */; };
-		E83131A9228DB2660046542F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E83131A8228DB2660046542F /* Icons */; };
+		77AC1DFC2292FAE80019A23F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF52292FAE80019A23F /* Defaults.swift */; };
+		77AC1DFD2292FAE80019A23F /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF62292FAE80019A23F /* FavoriteTableViewCell.swift */; };
+		77AC1DFE2292FAE80019A23F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF72292FAE80019A23F /* Contact.swift */; };
+		77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */; };
+		77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */; };
+		77AC1E012292FAE80019A23F /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */; };
+		77AC1E022292FAE80019A23F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +91,13 @@
 		0D0480C52284696D000A2399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580063DA2292C66C000C4E67 /* MusicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
 		580063DC2292C83A000C4E67 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
-		E83131A8228DB2660046542F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Icons; path = ../../../../Downloads/Icons; sourceTree = "<group>"; };
+		77AC1DF52292FAE80019A23F /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		77AC1DF62292FAE80019A23F /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		77AC1DF72292FAE80019A23F /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContactsViewController.swift; sourceTree = "<group>"; };
+		77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherFavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +147,13 @@
 				0D0480A32284696B000A2399 /* Assets.xcassets */,
 				0D0480A52284696B000A2399 /* LaunchScreen.storyboard */,
 				0D0480A82284696B000A2399 /* Info.plist */,
-				E83131A8228DB2660046542F /* Icons */,
+				77AC1DF72292FAE80019A23F /* Contact.swift */,
+				77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */,
+				77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */,
+				77AC1DF52292FAE80019A23F /* Defaults.swift */,
+				77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */,
+				77AC1DF62292FAE80019A23F /* FavoriteTableViewCell.swift */,
+				77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */,
 				580063DA2292C66C000C4E67 /* MusicProvider.swift */,
 				580063DC2292C83A000C4E67 /* MusicPlayer.swift */,
 			);
@@ -266,7 +284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0480A72284696B000A2399 /* LaunchScreen.storyboard in Resources */,
-				E83131A9228DB2660046542F /* Icons in Resources */,
 				0D0480A42284696B000A2399 /* Assets.xcassets in Resources */,
 				0D0480A22284696B000A2399 /* Main.storyboard in Resources */,
 			);
@@ -297,9 +314,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */,
+				77AC1E022292FAE80019A23F /* ContactsViewController.swift in Sources */,
+				77AC1DFD2292FAE80019A23F /* FavoriteTableViewCell.swift in Sources */,
 				0D04809F2284696B000A2399 /* ViewController.swift in Sources */,
+				77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */,
+				77AC1DFC2292FAE80019A23F /* Defaults.swift in Sources */,
 				580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */,
+				77AC1E012292FAE80019A23F /* ContactTableViewCell.swift in Sources */,
+				77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */,
 				0D04809D2284696B000A2399 /* AppDelegate.swift in Sources */,
+				77AC1DFE2292FAE80019A23F /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R547FQRJY9;
 				INFOPLIST_FILE = "Watchill WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R547FQRJY9;
 				INFOPLIST_FILE = "Watchill WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,6 +545,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R547FQRJY9;
 				IBSC_MODULE = Watchill_WatchKit_Extension;
 				INFOPLIST_FILE = "Watchill WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.Watchill.watchkitapp;
@@ -537,6 +564,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R547FQRJY9;
 				IBSC_MODULE = Watchill_WatchKit_Extension;
 				INFOPLIST_FILE = "Watchill WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.Watchill.watchkitapp;
@@ -554,6 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R547FQRJY9;
 				INFOPLIST_FILE = Watchill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -571,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R547FQRJY9;
 				INFOPLIST_FILE = Watchill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
