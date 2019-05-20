@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qyg-xf-auc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qyg-xf-auc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="146" y="-1084"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorite Contacts View Controller-->
         <scene sceneID="VYd-55-brW">
             <objects>
-                <viewController id="nnd-XP-XXQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" id="nnd-XP-XXQ" customClass="FavoriteContactsViewController" customModule="Watchill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kjb-jS-hIU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="92" id="VoT-Xx-fYu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="92" id="VoT-Xx-fYu" customClass="FavoriteTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VoT-Xx-fYu" id="Us2-lL-IEy">
@@ -126,6 +126,9 @@
                                                     <rect key="frame" x="318" y="29" width="34" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="Phone"/>
+                                                    <connections>
+                                                        <action selector="callContact:" destination="VoT-Xx-fYu" eventType="touchUpInside" id="WBb-Gx-zN0"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contato de Emergencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-Oq-K86">
                                                     <rect key="frame" x="15" y="58" width="142" height="16"/>
@@ -137,8 +140,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="tah-Em-ZLS" id="peh-gP-YTv"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="P2o-M1-z0b">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherFavoritesTableViewCell" rowHeight="76" id="P2o-M1-z0b" customClass="OtherFavoritesTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P2o-M1-z0b" id="lTs-pl-GzB">
@@ -163,10 +169,17 @@
                                                     <rect key="frame" x="326" y="20" width="34" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="Phone"/>
+                                                    <connections>
+                                                        <action selector="callContact:" destination="P2o-M1-z0b" eventType="touchUpInside" id="FCr-Z0-Vyw"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="4yR-mA-u4H" id="15H-Db-0wy"/>
+                                            <outlet property="phoneLabel" destination="0Dl-rY-wkg" id="IM0-Ki-1WG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -181,17 +194,18 @@
                         <viewLayoutGuide key="safeArea" id="nmX-K0-VLs"/>
                     </view>
                     <connections>
-                        <segue destination="jHt-S4-DEd" kind="show" id="3dp-k5-ICd"/>
+                        <outlet property="favoritesTableView" destination="juc-XC-KOG" id="eeq-IE-r3f"/>
+                        <segue destination="jHt-S4-DEd" kind="show" identifier="ContactsViewController" id="3dp-k5-ICd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnk-qr-uWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1260" y="-1082"/>
         </scene>
-        <!--View Controller-->
+        <!--Contacts View Controller-->
         <scene sceneID="OOd-uw-jnm">
             <objects>
-                <viewController id="jHt-S4-DEd" sceneMemberID="viewController">
+                <viewController id="jHt-S4-DEd" customClass="ContactsViewController" customModule="Watchill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4dn-Cm-iNp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,7 +216,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="EiD-67-cBV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactTableViewCell" rowHeight="70" id="EiD-67-cBV" customClass="ContactTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EiD-67-cBV" id="zfa-J3-tOr">
@@ -226,6 +240,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="TEU-0t-jsi" id="xlf-TE-k6p"/>
+                                            <outlet property="phoneLabel" destination="aT8-fV-xxG" id="TXh-7o-eT2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -233,6 +251,9 @@
                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="2vt-kk-BXU"/>
                     </view>
+                    <connections>
+                        <outlet property="contactsTableView" destination="0yu-rG-dex" id="P45-5c-kSD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8g4-nA-BEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,11 +261,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone" width="153.19148254394531" height="153.19148254394531"/>
+        <image name="Phone" width="100" height="100"/>
         <image name="Phone.png" width="100" height="100"/>
         <image name="QueroMorrer" width="665" height="660"/>
-        <image name="icons8-fast-forward-64" width="153.60000610351562" height="153.60000610351562"/>
-        <image name="icons8-play-button-circled-100" width="153.19148254394531" height="153.19148254394531"/>
-        <image name="icons8-rewind-64" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="icons8-fast-forward-64" width="64" height="64"/>
+        <image name="icons8-play-button-circled-100" width="100" height="100"/>
+        <image name="icons8-rewind-64" width="64" height="64"/>
     </resources>
 </document>
