@@ -13,6 +13,8 @@ class FavoriteTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     
+    @IBOutlet weak var callButton: UIButton!
+    
     @IBAction func callContact(_ sender: Any) {
         let digitSet = CharacterSet.decimalDigits
         if let phone = phoneLabel.text {

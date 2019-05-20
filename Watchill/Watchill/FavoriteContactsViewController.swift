@@ -102,9 +102,23 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+
         if tableView.isEditing {
+            if let cell = tableView.cellForRow(at: indexPath) as? FavoriteTableViewCell {
+                cell.callButton.isHidden = true
+            } else if let cell = tableView.cellForRow(at: indexPath) as? OtherFavoritesTableViewCell {
+                cell.callButton.isHidden = true
+            }
+            
             return true
         }
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? FavoriteTableViewCell {
+            cell.callButton.isHidden = false
+        } else if let cell = tableView.cellForRow(at: indexPath) as? OtherFavoritesTableViewCell {
+            cell.callButton.isHidden = false
+        }
+        
         return false
     }
     

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,6 +160,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="callButton" destination="dcZ-BQ-rxC" id="ycW-Qp-xRq"/>
                                             <outlet property="nameLabel" destination="tah-Em-ZLS" id="peh-gP-YTv"/>
                                             <outlet property="phoneLabel" destination="zRn-m7-SrJ" id="bQB-nM-bfl"/>
                                         </connections>
@@ -197,6 +198,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
+                                            <outlet property="callButton" destination="57M-5C-kj3" id="MCl-rH-AEX"/>
                                             <outlet property="nameLabel" destination="4yR-mA-u4H" id="15H-Db-0wy"/>
                                             <outlet property="phoneLabel" destination="0Dl-rY-wkg" id="IM0-Ki-1WG"/>
                                         </connections>
@@ -281,10 +283,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone" width="153.19148254394531" height="153.19148254394531"/>
+        <image name="Phone" width="100" height="100"/>
         <image name="QueroMorrer" width="665" height="660"/>
-        <image name="icons8-fast-forward-64" width="153.60000610351562" height="153.60000610351562"/>
-        <image name="icons8-play-button-circled-100" width="153.19148254394531" height="153.19148254394531"/>
-        <image name="icons8-rewind-64" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="icons8-fast-forward-64" width="64" height="64"/>
+        <image name="icons8-play-button-circled-100" width="100" height="100"/>
+        <image name="icons8-rewind-64" width="64" height="64"/>
     </resources>
 </document>
