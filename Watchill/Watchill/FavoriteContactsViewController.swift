@@ -22,10 +22,10 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
         self.favoritesTableView.dataSource = self
         self.favoritesTableView.delegate = self
         
-        let editButton = UIBarButtonItem(title: EDIT, style: .plain, target: self, action: #selector(editing))
-        navigationItem.leftBarButtonItem = editButton
+        let editButton = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(editing))
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(adding))
-        navigationItem.rightBarButtonItem = addButton
+        
+        navigationItem.rightBarButtonItems = [addButton, editButton]
         
     }
     
