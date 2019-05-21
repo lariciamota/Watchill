@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
     <device id="watch40" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="PoiretOne-Regular.ttf">
@@ -30,22 +30,25 @@
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="AYe-6T-ycL" kind="push" id="pNg-Ub-5br"/>
+                                <segue destination="AYe-6T-ycL" kind="push" identifier="ChoiceController" id="pNg-Ub-5br"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Não" id="bwc-y4-zSp">
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.35685837269999998" green="0.51165837049999996" blue="0.63923329110000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="click" destination="5cD-u1-UT0" id="VeF-CM-nnE"/>
+                            </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="60" y="50"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Choice Interface Controller-->
         <scene sceneID="Fhv-ge-eoC">
             <objects>
-                <controller id="AYe-6T-ycL">
+                <controller id="AYe-6T-ycL" customClass="ChoiceInterfaceController" customModule="Watchill_WatchKit_Extension">
                     <items>
                         <label width="1" height="45" alignment="left" text="O que voce gostaria de fazer?" textAlignment="center" numberOfLines="2" id="lwv-L4-xse">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -66,6 +69,9 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="callButton" destination="5Ew-Q0-3WX" id="8eh-6H-2wQ"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="346" y="50"/>

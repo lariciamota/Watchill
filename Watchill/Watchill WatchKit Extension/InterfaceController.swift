@@ -10,25 +10,24 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 
-class InterfaceController: WKInterfaceController, WCSessionDelegate {
-    
-    @IBAction func clique() {
-        sendRequest()
-    }
-    
-    let wcSession = WCSession.default
+class InterfaceController: WKInterfaceController {
+    var connectivityHandler = WatchSessionManager.shared
+    var session : WCSession?
+    let contact = "contact"
+    var name = ""
+    var phone = ""
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
         // Configure interface objects here.
-        enableConnection()
-        sendRequest()
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+            connectivityHandler.watchOSDelegate = self
+        sendRequest()
     }
     
     override func didDeactivate() {
@@ -36,30 +35,37 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         super.didDeactivate()
     }
     
-    func enableConnection(){
-        if(WCSession.isSupported()){
-            self.wcSession.delegate = self
-            wcSession.activate()
-            print("ativando conexão")
-        }
-    }
-    
     func sendRequest(){
         print("enviando pedido")
         let msg = ["get_contact": true]
-        self.wcSession.sendMessage(msg
-            , replyHandler: { (resposta) in print(resposta)}, errorHandler: { (error) in print(error)} )
+        connectivityHandler.sendMessage(message: msg, replyHandler: { (resposta) in
+            let data = resposta[self.contact] as! [String]
+            self.name = data[0]
+            self.phone = data[1]
+            print(self.name)}, errorHandler: { (error) in print(error)} )
     }
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        if let received = message["contact"] as? [String] {
-            print(received[0])
-            
-            let mensagemVolta = ["mensagem": "Chegou!!"]
-            replyHandler(mensagemVolta)
+    override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
+        if segueIdentifier == "ChoiceController" {
+            return ["name": self.name,
+                    "phone":self.phone]
         }
+        return nil
     }
+
+    
+}
+
+extension InterfaceController: WatchOSDelegate {
+    
+    func messageReceived(tuple: MessageReceived) {
+//        DispatchQueue.main.async() {
+//            WKInterfaceDevice.current().play(.notification)
+//            if let msg = tuple.message[self.contact] as? [String] {
+//                print("teste")
+//                
+//            }
+//        }
+    }
+    
 }

@@ -21,6 +21,9 @@
 		0D0480C42284696D000A2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0480C32284696D000A2399 /* Assets.xcassets */; };
 		580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DA2292C66C000C4E67 /* MusicProvider.swift */; };
 		580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DC2292C83A000C4E67 /* MusicPlayer.swift */; };
+		772E3E6A229483E600E1ADCA /* ChoiceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E3E69229483E600E1ADCA /* ChoiceInterfaceController.swift */; };
+		7738D9CD22946AEB001852EA /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738D9CC22946AEB001852EA /* WatchSessionManager.swift */; };
+		7738D9CE22946C43001852EA /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738D9CC22946AEB001852EA /* WatchSessionManager.swift */; };
 		77AC1DFC2292FAE80019A23F /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF52292FAE80019A23F /* Defaults.swift */; };
 		77AC1DFD2292FAE80019A23F /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF62292FAE80019A23F /* FavoriteTableViewCell.swift */; };
 		77AC1DFE2292FAE80019A23F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF72292FAE80019A23F /* Contact.swift */; };
@@ -28,7 +31,6 @@
 		77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */; };
 		77AC1E012292FAE80019A23F /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */; };
 		77AC1E022292FAE80019A23F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */; };
-		BB6597C1229446EA004123BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6597C0229446EA004123BB /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		0D0480C52284696D000A2399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		580063DA2292C66C000C4E67 /* MusicProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicProvider.swift; sourceTree = "<group>"; };
 		580063DC2292C83A000C4E67 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		772E3E69229483E600E1ADCA /* ChoiceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceInterfaceController.swift; sourceTree = "<group>"; };
+		7738D9CC22946AEB001852EA /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		77AC1DF52292FAE80019A23F /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		77AC1DF62292FAE80019A23F /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		77AC1DF72292FAE80019A23F /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -99,7 +103,6 @@
 		77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherFavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		BB6597C0229446EA004123BB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../../../../../Desktop/Contact.swift; sourceTree = "<group>"; };
 		E81B296C229435870085E9AD /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		E81B296D229435870085E9AD /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,7 @@
 		0D0480902284696A000A2399 = {
 			isa = PBXGroup;
 			children = (
+				7738D9CB22946AD5001852EA /* Commons */,
 				0D04809B2284696B000A2399 /* Watchill */,
 				0D0480AF2284696C000A2399 /* Watchill WatchKit App */,
 				0D0480BE2284696C000A2399 /* Watchill WatchKit Extension */,
@@ -145,13 +149,13 @@
 		0D04809B2284696B000A2399 /* Watchill */ = {
 			isa = PBXGroup;
 			children = (
+				77AC1DF72292FAE80019A23F /* Contact.swift */,
 				0D04809C2284696B000A2399 /* AppDelegate.swift */,
 				0D04809E2284696B000A2399 /* ViewController.swift */,
 				0D0480A02284696B000A2399 /* Main.storyboard */,
 				0D0480A32284696B000A2399 /* Assets.xcassets */,
 				0D0480A52284696B000A2399 /* LaunchScreen.storyboard */,
 				0D0480A82284696B000A2399 /* Info.plist */,
-				77AC1DF72292FAE80019A23F /* Contact.swift */,
 				77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */,
 				77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */,
 				77AC1DF52292FAE80019A23F /* Defaults.swift */,
@@ -179,12 +183,20 @@
 			children = (
 				E81B296B229435870085E9AD /* Poiret_One */,
 				0D0480BF2284696C000A2399 /* InterfaceController.swift */,
-				BB6597C0229446EA004123BB /* Contact.swift */,
 				0D0480C12284696C000A2399 /* ExtensionDelegate.swift */,
 				0D0480C32284696D000A2399 /* Assets.xcassets */,
 				0D0480C52284696D000A2399 /* Info.plist */,
+				772E3E69229483E600E1ADCA /* ChoiceInterfaceController.swift */,
 			);
 			path = "Watchill WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		7738D9CB22946AD5001852EA /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				7738D9CC22946AEB001852EA /* WatchSessionManager.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 		E81B296B229435870085E9AD /* Poiret_One */ = {
@@ -334,6 +346,7 @@
 				0D04809F2284696B000A2399 /* ViewController.swift in Sources */,
 				77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */,
 				77AC1DFC2292FAE80019A23F /* Defaults.swift in Sources */,
+				7738D9CE22946C43001852EA /* WatchSessionManager.swift in Sources */,
 				580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */,
 				77AC1E012292FAE80019A23F /* ContactTableViewCell.swift in Sources */,
 				77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */,
@@ -346,8 +359,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB6597C1229446EA004123BB /* Contact.swift in Sources */,
 				0D0480C22284696C000A2399 /* ExtensionDelegate.swift in Sources */,
+				7738D9CD22946AEB001852EA /* WatchSessionManager.swift in Sources */,
+				772E3E6A229483E600E1ADCA /* ChoiceInterfaceController.swift in Sources */,
 				0D0480C02284696C000A2399 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
