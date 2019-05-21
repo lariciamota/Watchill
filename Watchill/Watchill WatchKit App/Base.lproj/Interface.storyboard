@@ -58,7 +58,7 @@
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="YTl-X5-bqK" kind="push" id="fOa-1g-sBY"/>
+                                <action selector="callNumber" destination="AYe-6T-ycL" id="eZ9-sW-gnk"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Relaxar com Musica" id="2ej-GB-f6n">

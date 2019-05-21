@@ -13,6 +13,20 @@ class ChoiceInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var callButton: WKInterfaceButton!
     
+    @IBAction func callNumber() {
+        let digitSet = CharacterSet.decimalDigits
+        if phoneNumber != "" {
+            let numberToCall = String(phoneNumber.unicodeScalars.filter { digitSet.contains($0) })
+            guard let number = URL(string: "tel://" + numberToCall) else {
+                print("Número inválido.")
+                return
+            }
+            WKExtension.shared().openSystemURL(number)
+        } else {
+            print("Número inválido.")
+        }
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
