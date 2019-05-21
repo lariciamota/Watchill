@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,32 +41,24 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="980"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbi-wQ-m7c" userLabel="PlayButton">
-                                                <rect key="frame" x="147" y="450" width="80" height="80"/>
+                                                <rect key="frame" x="148" y="282" width="80" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-play-button-circled-100"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lC-Zo-V96" userLabel="RewindButton">
-                                                <rect key="frame" x="94" y="468" width="45" height="45"/>
+                                                <rect key="frame" x="95" y="300" width="45" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-rewind-64"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-Eo-Wxc" userLabel="ForwardButton">
-                                                <rect key="frame" x="235" y="468" width="45" height="45"/>
+                                                <rect key="frame" x="235" y="300" width="45" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-fast-forward-64"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-VB-gnv" userLabel="ContactButton">
-                                                <rect key="frame" x="321" y="330" width="32" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="Phone"/>
-                                                <connections>
-                                                    <segue destination="nnd-XP-XXQ" kind="show" id="m0k-oN-IPJ"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MusicNow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-ZP-mxV">
-                                                <rect key="frame" x="145" y="538" width="80" height="21"/>
+                                                <rect key="frame" x="148" y="370" width="81" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -74,6 +66,14 @@
                                                 <rect key="frame" x="87" y="41" width="200" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="logo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaX-VB-gnv" userLabel="ContactButton">
+                                                <rect key="frame" x="326" y="427" width="32" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Phone"/>
+                                                <connections>
+                                                    <segue destination="nnd-XP-XXQ" kind="show" id="m0k-oN-IPJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8me-mt-kLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="-1084"/>
+            <point key="canvasLocation" x="144.80000000000001" y="-1084.8575712143929"/>
         </scene>
         <!--Favorite Contacts View Controller-->
         <scene sceneID="VYd-55-brW">
@@ -222,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnk-qr-uWf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="-1082.608695652174"/>
+            <point key="canvasLocation" x="1006" y="-1235"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="OOd-uw-jnm">
@@ -279,14 +279,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8g4-nA-BEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2141.5999999999999" y="-1083.5082458770617"/>
+            <point key="canvasLocation" x="1914" y="-1236"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Phone" width="100" height="100"/>
-        <image name="icons8-fast-forward-64" width="64" height="64"/>
-        <image name="icons8-play-button-circled-100" width="100" height="100"/>
-        <image name="icons8-rewind-64" width="64" height="64"/>
+        <image name="Phone" width="153.19148254394531" height="153.19148254394531"/>
+        <image name="icons8-fast-forward-64" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="icons8-play-button-circled-100" width="153.19148254394531" height="153.19148254394531"/>
+        <image name="icons8-rewind-64" width="153.60000610351562" height="153.60000610351562"/>
         <image name="logo" width="216" height="230"/>
     </resources>
 </document>

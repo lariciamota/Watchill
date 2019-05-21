@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
-    <device id="watch38" orientation="portrait">
+    <device id="watch40" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,17 +8,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PoiretOne-Regular.ttf">
+            <string>PoiretOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="xuB-gW-33i">
             <objects>
                 <controller id="5cD-u1-UT0">
                     <items>
-                        <label width="136" height="21" alignment="left" text="Watchill" textAlignment="center" id="35Q-XC-ckt">
+                        <label width="1" height="21" alignment="left" text="Watchill" textAlignment="center" id="35Q-XC-ckt">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                            <fontDescription key="font" name="PoiretOne-Regular" family="Poiret One" pointSize="27"/>
                         </label>
-                        <label width="136" height="25" alignment="left" text="Precisa de ajuda?" textAlignment="center" id="cTI-WT-Gx5">
+                        <label width="1" height="25" alignment="left" text="Precisa de ajuda?" textAlignment="center" id="cTI-WT-Gx5">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
                         <button width="1" alignment="left" title="Sim" id="auV-FN-eeZ">
@@ -42,22 +47,57 @@
             <objects>
                 <controller id="AYe-6T-ycL">
                     <items>
-                        <label width="136" height="45" alignment="left" text="O que voce gostaria de fazer?" textAlignment="center" numberOfLines="2" id="lwv-L4-xse">
+                        <label width="1" height="45" alignment="left" text="O que voce gostaria de fazer?" textAlignment="center" numberOfLines="2" id="lwv-L4-xse">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                            <fontDescription key="font" name="PoiretOne-Regular" family="Poiret One" pointSize="17"/>
                         </label>
-                        <button width="1" alignment="left" title="Ligar" id="5Ew-Q0-3WX">
+                        <button width="1" alignment="left" title="Ligar para Fulano" id="5Ew-Q0-3WX">
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="YTl-X5-bqK" kind="push" id="fOa-1g-sBY"/>
+                            </connections>
                         </button>
-                        <button width="1" alignment="left" title="Musica" id="2ej-GB-f6n">
+                        <button width="1" alignment="left" title="Relaxar com Musica" id="2ej-GB-f6n">
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.35685837269999998" green="0.51165837049999996" blue="0.63923329110000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="bt2-IO-yag" kind="push" id="aBg-sW-6zF"/>
+                            </connections>
                         </button>
                     </items>
                 </controller>
             </objects>
             <point key="canvasLocation" x="346" y="50"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="CQp-3P-sbT">
+            <objects>
+                <controller id="YTl-X5-bqK">
+                    <items>
+                        <label width="1" alignment="left" text="Nome do contato" textAlignment="center" id="mOu-N4-niO">
+                            <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <label width="1" height="74" alignment="left" id="Gfc-EL-BIY"/>
+                        <button width="1" alignment="left" title="Desligar" id="d4N-V4-jJJ">
+                            <color key="backgroundColor" red="1" green="0.37974772391296152" blue="0.31983340395369286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="628.79012345679018" y="49.619289340101517"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="6XT-ld-TS6">
+            <objects>
+                <controller spacing="4" id="bt2-IO-yag">
+                    <items>
+                        <nowPlayingView alignment="left" id="yZN-aP-49N"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="628.79012345679018" y="421.54822335025375"/>
         </scene>
     </scenes>
 </document>
