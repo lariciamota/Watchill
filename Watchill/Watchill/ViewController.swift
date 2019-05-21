@@ -7,26 +7,53 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WCSessionDelegate {
+    let favorite = Defaults.shared
+    
+    let wcSession = WCSession.default
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(x))
-        view.addGestureRecognizer(tap)
-    
-        
+        enableConnection()
     }
     
-    @objc func x(){
-        print("b")
+    func enableConnection(){
+        if(WCSession.isSupported()){
+            self.wcSession.delegate = self
+            wcSession.activate()
+            print("ativando conexão")
+        }
     }
-
-    @IBAction func acessarContatos(_ sender: UIButton) {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func sendContact(){
+        print("enviando contato")
         
-        print("a")
+        let msg = ["contact": [self.favorite.contacts[0].name, self.favorite.contacts[0].phone]]
+        self.wcSession.sendMessage(msg
+            , replyHandler: { (resposta) in print(resposta)}, errorHandler: { (error) in print(error)} )
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         
+        if let _ = message["get_contact"] as? Bool {
+            print("recebendo pedido")
+            
+            let msg = ["contact": [self.favorite.contacts[0].name, self.favorite.contacts[0].phone]]
+            replyHandler(msg)
+        }
     }
     
 }

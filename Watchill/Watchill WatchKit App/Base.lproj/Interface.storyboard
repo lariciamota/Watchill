@@ -17,7 +17,7 @@
         <!--Interface Controller-->
         <scene sceneID="xuB-gW-33i">
             <objects>
-                <controller id="5cD-u1-UT0">
+                <controller id="5cD-u1-UT0" customClass="InterfaceController" customModule="Watchill_WatchKit_Extension">
                     <items>
                         <label width="1" height="21" alignment="left" text="Watchill" textAlignment="center" id="35Q-XC-ckt">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -28,7 +28,7 @@
 		77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */; };
 		77AC1E012292FAE80019A23F /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */; };
 		77AC1E022292FAE80019A23F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */; };
-		E81B296A22942EC80085E9AD /* Poiret_One in Resources */ = {isa = PBXBuildFile; fileRef = E81B296922942EC80085E9AD /* Poiret_One */; };
+		BB6597C1229446EA004123BB /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6597C0229446EA004123BB /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,7 @@
 		77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherFavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		77AC1DFA2292FAE80019A23F /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		77AC1DFB2292FAE80019A23F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
-		E81B296922942EC80085E9AD /* Poiret_One */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Poiret_One; path = ../../../../Downloads/Poiret_One; sourceTree = "<group>"; };
+		BB6597C0229446EA004123BB /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../../../../../Desktop/Contact.swift; sourceTree = "<group>"; };
 		E81B296C229435870085E9AD /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		E81B296D229435870085E9AD /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +145,6 @@
 		0D04809B2284696B000A2399 /* Watchill */ = {
 			isa = PBXGroup;
 			children = (
-				E81B296922942EC80085E9AD /* Poiret_One */,
 				0D04809C2284696B000A2399 /* AppDelegate.swift */,
 				0D04809E2284696B000A2399 /* ViewController.swift */,
 				0D0480A02284696B000A2399 /* Main.storyboard */,
@@ -180,6 +179,7 @@
 			children = (
 				E81B296B229435870085E9AD /* Poiret_One */,
 				0D0480BF2284696C000A2399 /* InterfaceController.swift */,
+				BB6597C0229446EA004123BB /* Contact.swift */,
 				0D0480C12284696C000A2399 /* ExtensionDelegate.swift */,
 				0D0480C32284696D000A2399 /* Assets.xcassets */,
 				0D0480C52284696D000A2399 /* Info.plist */,
@@ -300,7 +300,6 @@
 			files = (
 				0D0480A72284696B000A2399 /* LaunchScreen.storyboard in Resources */,
 				0D0480A42284696B000A2399 /* Assets.xcassets in Resources */,
-				E81B296A22942EC80085E9AD /* Poiret_One in Resources */,
 				0D0480A22284696B000A2399 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6597C1229446EA004123BB /* Contact.swift in Sources */,
 				0D0480C22284696C000A2399 /* ExtensionDelegate.swift in Sources */,
 				0D0480C02284696C000A2399 /* InterfaceController.swift in Sources */,
 			);
