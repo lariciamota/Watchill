@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         WatchSessionManager.shared.startSession()
+        UINavigationBar.appearance().tintColor = UIColor(red:0.15, green:0.42, blue:0.45, alpha:1.0)
+//        UINavigationBar.appearance().barTintColor = UIColor(red:0.95, green:0.95, blue:0.87, alpha:1.0)
         return true
     }
 

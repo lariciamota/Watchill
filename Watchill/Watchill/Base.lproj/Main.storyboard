@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -116,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="juc-XC-KOG">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
@@ -149,7 +149,7 @@
                                                         <action selector="callContact:" destination="VoT-Xx-fYu" eventType="touchUpInside" id="WBb-Gx-zN0"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contato de Emergencia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-Oq-K86">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contato de Emergência" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-Oq-K86">
                                                     <rect key="frame" x="15" y="58" width="142" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -158,7 +158,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="callButton" destination="dcZ-BQ-rxC" id="ycW-Qp-xRq"/>
                                             <outlet property="nameLabel" destination="tah-Em-ZLS" id="peh-gP-YTv"/>
@@ -196,7 +196,6 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="callButton" destination="57M-5C-kj3" id="MCl-rH-AEX"/>
                                             <outlet property="nameLabel" destination="4yR-mA-u4H" id="15H-Db-0wy"/>
@@ -206,11 +205,11 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nmX-K0-VLs" firstAttribute="bottom" secondItem="juc-XC-KOG" secondAttribute="bottom" id="86z-U1-oO2"/>
                             <constraint firstItem="juc-XC-KOG" firstAttribute="leading" secondItem="nmX-K0-VLs" secondAttribute="leading" id="RfS-Gj-8Wz"/>
-                            <constraint firstItem="juc-XC-KOG" firstAttribute="top" secondItem="nmX-K0-VLs" secondAttribute="top" id="T79-GI-bs9"/>
+                            <constraint firstItem="juc-XC-KOG" firstAttribute="top" secondItem="nmX-K0-VLs" secondAttribute="top" constant="20" id="T79-GI-bs9"/>
                             <constraint firstItem="nmX-K0-VLs" firstAttribute="trailing" secondItem="juc-XC-KOG" secondAttribute="trailing" id="e6n-oL-p4o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nmX-K0-VLs"/>
@@ -283,10 +282,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone" width="153.19148254394531" height="153.19148254394531"/>
-        <image name="icons8-fast-forward-64" width="153.60000610351562" height="153.60000610351562"/>
-        <image name="icons8-play-button-circled-100" width="153.19148254394531" height="153.19148254394531"/>
-        <image name="icons8-rewind-64" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="Phone" width="100" height="100"/>
+        <image name="icons8-fast-forward-64" width="64" height="64"/>
+        <image name="icons8-play-button-circled-100" width="100" height="100"/>
+        <image name="icons8-rewind-64" width="64" height="64"/>
         <image name="logo" width="216" height="230"/>
     </resources>
 </document>

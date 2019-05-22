@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import ContactsUI
 
-class FavoriteContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+class FavoriteContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CNContactPickerDelegate {
     
     @IBOutlet weak var favoritesTableView: UITableView!
     
@@ -27,6 +29,8 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
         
         navigationItem.rightBarButtonItems = [addButton, editButton]
         
+        favoritesTableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.87, alpha:1.0)
+        favoritesTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,8 +43,25 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
     }
     
     @objc private func adding() {
-        performSegue(withIdentifier: "ContactsViewController", sender: nil)
+        let picker = CNContactPickerViewController()
+        picker.delegate = self
+        UINavigationBar.appearance().tintColor = UIColor(red:0.15, green:0.42, blue:0.45, alpha:1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red:0.15, green:0.42, blue:0.45, alpha:1.0)]
+        
+        UITableView.appearance().tintColor = UIColor(red:0.15, green:0.42, blue:0.45, alpha:1.0)
+        
+        self.present(picker, animated: true, completion: nil)
     }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        let favContact = Contact(name: contact.givenName + " " + contact.familyName, phone: contact.phoneNumbers.first?.value.stringValue ?? "")
+        addFavorite(favorite: favContact)
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     
     @objc private func editing() {
         favoritesTableView.setEditing(!favoritesTableView.isEditing, animated: true) // Set opposite value of current editing status
@@ -70,6 +91,9 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
             cell.nameLabel.text = person.name
             cell.nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
             cell.phoneLabel.text = person.phone
+            
+            cell.backgroundColor = UIColor.clear
+
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "OtherFavoritesTableViewCell") as! OtherFavoritesTableViewCell
@@ -78,6 +102,9 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
             cell.nameLabel.text = person.name
             cell.nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
             cell.phoneLabel.text = person.phone
+            
+            cell.backgroundColor = UIColor.clear
+
             return cell
         }
     }
@@ -121,15 +148,6 @@ class FavoriteContactsViewController: UIViewController, UITableViewDataSource, U
         }
         
         return false
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ContactsViewController"{
-            if let vcDestination = segue.destination as? ContactsViewController{
-                vcDestination.favoriteViewController = self
-            }
-        }
-        
     }
     
 }

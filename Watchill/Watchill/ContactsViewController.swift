@@ -36,7 +36,6 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
                         let char: Character = contact.givenName.uppercased().folding(options: .diacriticInsensitive, locale: .current).first ?? "#"
                         let index = self.letterToNumber[char] ?? 26
                         let newContact = Contact(name: contact.givenName + " " + contact.familyName, phone: contact.phoneNumbers.first?.value.stringValue ?? "")
-                        
                         if var value = newContacts[index] {
                             value.append(newContact)
                             newContacts[index] = value
@@ -44,11 +43,13 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
                             newContacts[index] = [newContact]
                         }
                     })
+                   
                     for (index, contacts) in newContacts {
                         newContacts[index] = contacts.sorted(by: { (c0, c1) -> Bool in
-                            (c0.name) < (c1.name)
+                            (c0.name) <= (c1.name)
                         })
                     }
+                    
                     self.contacts = newContacts
                 } catch let error {
                     print("Erro ao pegar contatos:", error)
@@ -89,6 +90,9 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         contacts = newContacts
 
         fetchContacts()
+        
+        contactsTableView.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.87, alpha:1.0)
+        contactsTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -108,6 +112,10 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        for c in contacts {
+            print(c.key)
+        }
+        print("fim")
         return contacts[section]?.count ?? 0
     }
     
@@ -133,6 +141,14 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         cell.nameLabel.font = UIFont.boldSystemFont(ofSize: 18)
         cell.phoneLabel.text = contact.phone
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//        view.tintColor = UIColor.red
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor(red:0.95, green:0.95, blue:0.87, alpha:1.0)
+        header.backgroundView?.backgroundColor = UIColor(red:0.15, green:0.42, blue:0.45, alpha:1.0)
+
     }
     
 }
