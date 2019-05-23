@@ -20,6 +20,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSContactsUsageDescription</key>
 	<string>Precisamos de acesso para adicionar seus contatos queridos</string>
 	<key>NSExtension</key>
@@ -27,7 +29,7 @@
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>br.ufpe.cin.Watchill.watchkitapp</string>
+			<string>br.ufpe.cin.Watchillapp.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
@@ -37,8 +39,6 @@
 		<string>OFL.txt</string>
 		<string>PoiretOne-Regular.ttf</string>
 	</array>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 </dict>
