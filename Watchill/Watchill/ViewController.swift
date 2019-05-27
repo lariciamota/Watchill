@@ -13,7 +13,7 @@ import HealthKit
 class ViewController: UIViewController {
     let favorite = Defaults.shared
     lazy var healthKitStore = HKHealthStore()
-
+    var musicisPlaying = false
     var connectivityHandler = WatchSessionManager.shared
     let contact = "contact"
     
@@ -23,10 +23,20 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var playingMusicLabel: UIView!
+    @IBOutlet weak var musicPlayingLabel: UILabel!
+    @IBOutlet weak var playingMusicLabel: UIView! // Remover essa variável
     
     @IBAction func playButton(_ sender: Any) {
         self.music_player.playMusic()
+        
+        if self.musicisPlaying {
+            self.musicisPlaying = true
+            // MUDAR O ICONE PARA PAUSE
+        } else {
+            // MUDAR O ICONE PARA PLAY
+        }
+        
+        musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
     
     

@@ -11,13 +11,16 @@ public class MusicPlayer {
     var shuffle_on = false
     var played_musics:[Int] = []
     
+    
     func lastMusic() {
-        print(self.played_musics)
-        print(self.played_musics.removeLast())
-        if (self.played_musics.isEmpty){
+
+        if (self.played_musics.isEmpty || self.played_musics.count < 2){
             self.setMusic(music_index: 0)
         } else {
-            self.setMusic(music_index: self.played_musics.removeLast())
+            self.played_musics.removeLast()
+            let music_index = self.played_musics.last!
+            self.actual_music = music_index
+            self.setMusic(music_index: music_index)
         }
         
     }
@@ -28,6 +31,7 @@ public class MusicPlayer {
     }
     
     func nextMusic(){
+        
         if (self.shuffle_on){
             self.resetShuffle()
             self.actual_music = Int.random(in: 0 ..< self.musics_to_play.count)
@@ -41,18 +45,23 @@ public class MusicPlayer {
             }
         }
         
+        self.setMusic(music_index: self.actual_music)
+        
         if (self.played_musics.count > 10){
             self.played_musics.removeFirst()
         }
-        
-        self.setMusic(music_index: self.actual_music)
     }
     
     func setMusic(music_index:Int) {
+        
+        if self.played_musics.last != self.actual_music {
+            self.played_musics.append(self.actual_music)
+        }
+        
         let path = Bundle.main.path(forResource: "Song/" + self.playlist[music_index], ofType:"")
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
-            self.played_musics.append(self.actual_music)
+            
         } catch {
             print("Não foi possível encontrar nenhuma música")
         }
