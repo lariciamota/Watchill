@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSContactsUsageDescription</key>
 	<string>Precisamos de acesso para adicionar seus contatos queridos</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Iremos utilizar suas informações de batimento cardíaco para poder utilizar o aplicativo</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Iremos utilizar suas informações de batimento cardíaco para poder utilizar o aplicativo</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>OFL.txt</string>
@@ -34,6 +38,7 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>healthkit</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

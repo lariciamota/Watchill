@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -224,10 +224,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone" width="100" height="100"/>
-        <image name="icons8-fast-forward-64" width="64" height="64"/>
-        <image name="icons8-play-button-circled-100" width="100" height="100"/>
-        <image name="icons8-rewind-64" width="64" height="64"/>
+        <image name="Phone" width="153.19148254394531" height="153.19148254394531"/>
+        <image name="icons8-fast-forward-64" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="icons8-play-button-circled-100" width="153.19148254394531" height="153.19148254394531"/>
+        <image name="icons8-rewind-64" width="153.60000610351562" height="153.60000610351562"/>
         <image name="logo" width="216" height="230"/>
     </resources>
 </document>

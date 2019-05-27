@@ -8,19 +8,28 @@
 
 import UIKit
 import WatchConnectivity
+import HealthKit
 
 class ViewController: UIViewController {
     let favorite = Defaults.shared
+    lazy var healthKitStore = HKHealthStore()
 
     var connectivityHandler = WatchSessionManager.shared
     let contact = "contact"
     
+    override func viewDidAppear(_ animated: Bool) {
+        if HKHealthStore.isHealthDataAvailable(){
+            authorizeHealthKit()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         connectivityHandler.iOSDelegate = self
     }
-    
+
     func sendContact(){
         print("enviando contato")
         let msg = [contact: [self.favorite.contacts[0].name, self.favorite.contacts[0].phone]]
@@ -31,6 +40,23 @@ class ViewController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         navigationItem.backBarButtonItem = backItem
+    }
+    
+    func authorizeHealthKit() {
+        
+        let healthKitTypes: Set = [
+            HKObjectType.quantityType(forIdentifier: .heartRate)!
+        ]
+        
+        healthKitStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { (success, error) in
+            if success {
+                print("success")
+            } else {
+                print("failure")
+            }
+            
+            if let error = error { print(error) }
+        }
     }
 }
 
