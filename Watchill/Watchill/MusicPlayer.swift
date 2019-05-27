@@ -1,71 +1,82 @@
-//
-//  MusicPlayer.swift
-//  Watchill
-//
-//  Created by Wilquer Torres de Lima on 20/05/19.
-//  Copyright © 2019 Danilo da Rocha Lira Araujo. All rights reserved.
-//
-
 import Foundation
 import AVFoundation
 
-class MusicPlayer {
+
+public class MusicPlayer {
     
-    var playList: [String] = []
-    var musics_to_play: [String] = []
+    var playlist:[String] = []
+    var musics_to_play:[String] = []
     var actual_music = 0
     var audioPlayer = AVAudioPlayer()
     var shuffle_on = false
+    var played_musics:[Int] = []
     
-    func setPlayList(playList: [String]) {
-        self.playList = playList
-        self.musics_to_play = playList
+    func lastMusic() {
+        print(self.played_musics)
+        print(self.played_musics.removeLast())
+        if (self.played_musics.isEmpty){
+            self.setMusic(music_index: 0)
+        } else {
+            self.setMusic(music_index: self.played_musics.removeLast())
+        }
+        
     }
     
-    func nextMusic() {
-        if self.shuffle_on {
+    func setPlaylist(playlist:[String]) {
+        self.playlist = playlist
+        self.musics_to_play = playlist
+    }
+    
+    func nextMusic(){
+        if (self.shuffle_on){
             self.resetShuffle()
             self.actual_music = Int.random(in: 0 ..< self.musics_to_play.count)
+            
         } else {
-            if self.actual_music == self.playList.count - 1 {
+            if (self.actual_music == self.playlist.count - 1){
                 self.actual_music = 0
-            } else {
+            }
+            else {
                 self.actual_music += 1
             }
         }
-        self.setMusic()
+        
+        if (self.played_musics.count > 10){
+            self.played_musics.removeFirst()
+        }
+        
+        self.setMusic(music_index: self.actual_music)
     }
     
-    func setMusic() {
-        let forResouce = "/Song" + self.playList[self.actual_music]
-        let path = Bundle.main.path(forResource: forResouce, ofType: "")
-        
+    func setMusic(music_index:Int) {
+        let path = Bundle.main.path(forResource: "Song/" + self.playlist[music_index], ofType:"")
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
+            self.played_musics.append(self.actual_music)
         } catch {
-            print("Erro, não foi possível encontrar uma música")
+            print("Não foi possível encontrar nenhuma música")
         }
     }
     
-    func playMusic() {
+    func playMusic(){
         self.audioPlayer.play()
     }
     
-    func stopMusic() {
+    func stopMusic(){
         self.audioPlayer.stop()
     }
     
-    func shuffle() {
-        if self.musics_to_play.count == 1 {
-            self.musics_to_play = self.playList
+    func shuffle(){
+        if self.shuffle_on{
+            self.shuffle_on = false
         } else {
-            self.musics_to_play.remove(at: self.actual_music)
+            self.shuffle_on = true
         }
     }
     
-    func resetShuffle() {
+    func resetShuffle(){
         if self.musics_to_play.count == 1 {
-            self.musics_to_play = self.playList
+            self.musics_to_play = self.playlist
         } else {
             self.musics_to_play.remove(at: self.actual_music)
         }

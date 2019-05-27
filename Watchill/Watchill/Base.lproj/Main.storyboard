@@ -44,16 +44,25 @@
                                                 <rect key="frame" x="148" y="282" width="80" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-play-button-circled-100"/>
+                                                <connections>
+                                                    <action selector="playButton:" destination="Qyg-xf-auc" eventType="touchUpInside" id="Fjk-bF-MZf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lC-Zo-V96" userLabel="RewindButton">
                                                 <rect key="frame" x="95" y="300" width="45" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-rewind-64"/>
+                                                <connections>
+                                                    <action selector="lastMusicButton:" destination="Qyg-xf-auc" eventType="touchUpInside" id="DT6-YE-9QW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IDT-Eo-Wxc" userLabel="ForwardButton">
                                                 <rect key="frame" x="235" y="300" width="45" height="45"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="icons8-fast-forward-64"/>
+                                                <connections>
+                                                    <action selector="nextMusicButton:" destination="Qyg-xf-auc" eventType="touchUpInside" id="LIA-pC-Tt4"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MusicNow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-ZP-mxV">
                                                 <rect key="frame" x="148" y="370" width="81" height="20"/>
@@ -102,6 +111,9 @@
                     <navigationItem key="navigationItem" id="4x7-J0-TLs"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="playingMusicLabel" destination="GTE-b9-U6w" id="hx0-SJ-A0q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8me-mt-kLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

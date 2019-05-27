@@ -23,10 +23,31 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var playingMusicLabel: UIView!
+    
+    @IBAction func playButton(_ sender: Any) {
+        self.music_player.playMusic()
+    }
+    
+    
+    @IBAction func nextMusicButton(_ sender: Any) {
+        self.music_player.nextMusic()
+    }
+    
+    @IBAction func lastMusicButton(_ sender: Any) {
+        
+        self.music_player.lastMusic()
+    }
+    
+    
+    let music_player = MusicPlayer()
+    let music_provider = MusicProvider()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.music_player.setPlaylist(playlist: self.music_provider.musicsList())
+        self.music_player.setMusic(music_index: 0)
         connectivityHandler.iOSDelegate = self
     }
 
