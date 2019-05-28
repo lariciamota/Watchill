@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
     <device id="watch40" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="PoiretOne-Regular.ttf">
@@ -26,18 +26,11 @@
                         <label width="1" height="25" alignment="left" text="Precisa de ajuda?" textAlignment="center" id="cTI-WT-Gx5">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
-                        <button width="1" alignment="left" title="Sim" id="auV-FN-eeZ">
+                        <button width="1" alignment="left" verticalAlignment="center" title="Sim" id="auV-FN-eeZ">
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="AYe-6T-ycL" kind="push" identifier="ChoiceController" id="pNg-Ub-5br"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Não" id="bwc-y4-zSp">
-                            <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <color key="backgroundColor" red="0.35685837269999998" green="0.51165837049999996" blue="0.63923329110000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <action selector="click" destination="5cD-u1-UT0" id="VeF-CM-nnE"/>
                             </connections>
                         </button>
                     </items>
@@ -56,13 +49,13 @@
                         </label>
                         <button width="1" alignment="left" title="Ligar para Fulano" id="5Ew-Q0-3WX">
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <color key="backgroundColor" red="0.224229753" green="0.3582202196" blue="0.50590074060000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="backgroundColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="callNumber" destination="AYe-6T-ycL" id="eZ9-sW-gnk"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Relaxar com Musica" id="2ej-GB-f6n">
-                            <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="backgroundColor" red="0.35685837269999998" green="0.51165837049999996" blue="0.63923329110000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="bt2-IO-yag" kind="push" id="aBg-sW-6zF"/>
@@ -77,29 +70,21 @@
             <point key="canvasLocation" x="346" y="50"/>
         </scene>
         <!--Interface Controller-->
-        <scene sceneID="CQp-3P-sbT">
-            <objects>
-                <controller id="YTl-X5-bqK">
-                    <items>
-                        <label width="1" alignment="left" text="Nome do contato" textAlignment="center" id="mOu-N4-niO">
-                            <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="font" type="system" pointSize="20"/>
-                        </label>
-                        <label width="1" height="74" alignment="left" id="Gfc-EL-BIY"/>
-                        <button width="1" alignment="left" title="Desligar" id="d4N-V4-jJJ">
-                            <color key="backgroundColor" red="1" green="0.37974772391296152" blue="0.31983340395369286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="628.79012345679018" y="49.619289340101517"/>
-        </scene>
-        <!--Interface Controller-->
         <scene sceneID="6XT-ld-TS6">
             <objects>
                 <controller spacing="4" id="bt2-IO-yag">
                     <items>
-                        <nowPlayingView alignment="left" id="yZN-aP-49N"/>
+                        <label width="1" height="25" alignment="left" textAlignment="center" id="uJL-rG-OcH">
+                            <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </label>
+                        <button width="32" height="32" alignment="center" verticalAlignment="bottom" backgroundImage="icons8-shuffle-filled-100" id="h0h-Gj-6zJ"/>
+                        <group width="1" alignment="left" verticalAlignment="center" id="Azr-bz-3aN">
+                            <items>
+                                <button width="42" height="47" alignment="left" verticalAlignment="center" backgroundImage="icons8-rewind-64" id="Z9W-W1-quJ"/>
+                                <button width="72" height="74" alignment="left" verticalAlignment="center" backgroundImage="icons8-play-button-circled-100" id="2Kg-yv-MrJ"/>
+                                <button width="42" height="47" alignment="left" verticalAlignment="center" backgroundImage="icons8-fast-forward-64" id="HVR-D3-QO8"/>
+                            </items>
+                        </group>
                     </items>
                 </controller>
             </objects>
