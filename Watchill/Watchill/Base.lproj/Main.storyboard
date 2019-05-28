@@ -113,7 +113,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="musicPlayingLabel" destination="XVa-ZP-mxV" id="nhl-kd-Shy"/>
-                        <outlet property="playingMusicLabel" destination="GTE-b9-U6w" id="hx0-SJ-A0q"/>
+                        <outlet property="playingButtonOutlet" destination="Lbi-wQ-m7c" id="Tb6-17-bos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8me-mt-kLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -133,7 +133,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="92" id="VoT-Xx-fYu" customClass="FavoriteTableViewCell" customModule="Watchill" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="92" id="VoT-Xx-fYu" customClass="FavoriteTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="92"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VoT-Xx-fYu" id="Us2-lL-IEy">
@@ -178,7 +178,7 @@
                                             <outlet property="phoneLabel" destination="zRn-m7-SrJ" id="bQB-nM-bfl"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherFavoritesTableViewCell" rowHeight="76" id="P2o-M1-z0b" customClass="OtherFavoritesTableViewCell" customModule="Watchill" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OtherFavoritesTableViewCell" rowHeight="76" id="P2o-M1-z0b" customClass="OtherFavoritesTableViewCell" customModule="Watchill" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="120" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P2o-M1-z0b" id="lTs-pl-GzB">
