@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             self.music_player.playMusic()
             self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
         }
-        HealthKitManager.saveMockHeartData()
+        //HealthKitManager.saveMockHeartData()
         
         musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
