@@ -180,7 +180,7 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="musicPlayingLabel" destination="XVa-ZP-mxV" id="nhl-kd-Shy"/>
-                        <outlet property="playingMusicLabel" destination="GTE-b9-U6w" id="hx0-SJ-A0q"/>
+                        <outlet property="playingButtonOutlet" destination="Lbi-wQ-m7c" id="Tb6-17-bos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8me-mt-kLK" userLabel="First Responder" sceneMemberID="firstResponder"/>

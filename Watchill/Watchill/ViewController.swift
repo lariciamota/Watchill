@@ -19,22 +19,27 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if HKHealthStore.isHealthDataAvailable(){
-            authorizeHealthKit()
+            HealthKitManager.authorizeHealthKit()
         }
     }
     
+    @IBOutlet weak var playingButtonOutlet: UIButton!
     @IBOutlet weak var musicPlayingLabel: UILabel!
-    @IBOutlet weak var playingMusicLabel: UIView! // Remover essa variável
     
     @IBAction func playButton(_ sender: Any) {
-        self.music_player.playMusic()
+        
         
         if self.musicisPlaying {
-            self.musicisPlaying = true
-            // MUDAR O ICONE PARA PAUSE
+            self.musicisPlaying = false
+            self.music_player.stopMusic()
+            self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+
         } else {
-            // MUDAR O ICONE PARA PLAY
+            self.musicisPlaying = true
+            self.music_player.playMusic()
+            self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
         }
+        //HealthKitManager.saveMockHeartData()
         
         musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
@@ -73,22 +78,6 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = backItem
     }
     
-    func authorizeHealthKit() {
-        
-        let healthKitTypes: Set = [
-            HKObjectType.quantityType(forIdentifier: .heartRate)!
-        ]
-        
-        healthKitStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { (success, error) in
-            if success {
-                print("success")
-            } else {
-                print("failure")
-            }
-            
-            if let error = error { print(error) }
-        }
-    }
 }
 
 extension ViewController: iOSDelegate {
