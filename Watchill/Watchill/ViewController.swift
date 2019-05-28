@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if HKHealthStore.isHealthDataAvailable(){
-            authorizeHealthKit()
+            HealthKitManager.authorizeHealthKit()
         }
     }
     
@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         } else {
             // MUDAR O ICONE PARA PLAY
         }
+        HealthKitManager.saveMockHeartData()
         
         musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
@@ -73,22 +74,6 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = backItem
     }
     
-    func authorizeHealthKit() {
-        
-        let healthKitTypes: Set = [
-            HKObjectType.quantityType(forIdentifier: .heartRate)!
-        ]
-        
-        healthKitStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { (success, error) in
-            if success {
-                print("success")
-            } else {
-                print("failure")
-            }
-            
-            if let error = error { print(error) }
-        }
-    }
 }
 
 extension ViewController: iOSDelegate {
