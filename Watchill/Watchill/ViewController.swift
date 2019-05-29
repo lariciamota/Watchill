@@ -10,36 +10,51 @@ import UIKit
 import WatchConnectivity
 import HealthKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     let favorite = Defaults.shared
     lazy var healthKitStore = HKHealthStore()
-    var musicisPlaying = false
     var connectivityHandler = WatchSessionManager.shared
     let contact = "contact"
     
     override func viewDidAppear(_ animated: Bool) {
         if HKHealthStore.isHealthDataAvailable(){
-            HealthKitManager.authorizeHealthKit()
+            authorizeHealthKit()
         }
     }
+     func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.music_provider.musicsList().count
+    }
+    
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "musicNameCell", for: indexPath)
+        
+        cell.textLabel?.text = self.music_provider.musicsList()[indexPath.row]
+        
+        return cell
+    }
+    
+    @IBOutlet weak var tableViewCell: UITableViewCell!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var musicNameCell: UILabel!
     @IBOutlet weak var playingButtonOutlet: UIButton!
     @IBOutlet weak var musicPlayingLabel: UILabel!
     
+
+    
+    
     @IBAction func playButton(_ sender: Any) {
         
-        
-        if self.musicisPlaying {
-            self.musicisPlaying = false
+        if self.music_player.musicIsPlaying{
             self.music_player.stopMusic()
             self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
-
         } else {
-            self.musicisPlaying = true
             self.music_player.playMusic()
             self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
         }
-        //HealthKitManager.saveMockHeartData()
         
         musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
@@ -47,11 +62,12 @@ class ViewController: UIViewController {
     
     @IBAction func nextMusicButton(_ sender: Any) {
         self.music_player.nextMusic()
+        musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
     
     @IBAction func lastMusicButton(_ sender: Any) {
-        
         self.music_player.lastMusic()
+        musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music]
     }
     
     
@@ -64,6 +80,10 @@ class ViewController: UIViewController {
         self.music_player.setPlaylist(playlist: self.music_provider.musicsList())
         self.music_player.setMusic(music_index: 0)
         connectivityHandler.iOSDelegate = self
+        
+        for music in self.music_provider.musicsList(){
+            print(music)
+        }
     }
 
     func sendContact(){
@@ -78,7 +98,29 @@ class ViewController: UIViewController {
         navigationItem.backBarButtonItem = backItem
     }
     
+    func authorizeHealthKit() {
+        
+        let healthKitTypes: Set = [
+            HKObjectType.quantityType(forIdentifier: .heartRate)!
+        ]
+        
+        healthKitStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { (success, error) in
+            if success {
+                print("success")
+            } else {
+                print("failure")
+            }
+            
+            if let error = error { print(error) }
+        }
+    }
+    
+    
+    
+
+    
 }
+
 
 extension ViewController: iOSDelegate {
     

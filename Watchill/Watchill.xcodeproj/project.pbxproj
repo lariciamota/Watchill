@@ -20,10 +20,11 @@
 		0D0480C22284696C000A2399 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0480C12284696C000A2399 /* ExtensionDelegate.swift */; };
 		0D0480C42284696D000A2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0480C32284696D000A2399 /* Assets.xcassets */; };
 		0D53CA8A229C587D00AE1560 /* Song in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CA89229C587D00AE1560 /* Song */; };
+		0D53CA8B229C587D00AE1560 /* Song in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CA89229C587D00AE1560 /* Song */; };
+		0D53CA8C229C587D00AE1560 /* Song in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CA89229C587D00AE1560 /* Song */; };
 		580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DA2292C66C000C4E67 /* MusicProvider.swift */; };
 		580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DC2292C83A000C4E67 /* MusicPlayer.swift */; };
 		58E63DAE2296DBAF008AB4A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E63DAD2296DBAF008AB4A2 /* HealthKit.framework */; };
-		58E63DB2229D5BA4008AB4A2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E63DB1229D5BA4008AB4A2 /* HealthKitManager.swift */; };
 		772E3E6A229483E600E1ADCA /* ChoiceInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E3E69229483E600E1ADCA /* ChoiceInterfaceController.swift */; };
 		7738D9CD22946AEB001852EA /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738D9CC22946AEB001852EA /* WatchSessionManager.swift */; };
 		7738D9CE22946C43001852EA /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7738D9CC22946AEB001852EA /* WatchSessionManager.swift */; };
@@ -98,7 +99,6 @@
 		580063DC2292C83A000C4E67 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		58E63DA72296D724008AB4A2 /* Watchill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Watchill.entitlements; sourceTree = "<group>"; };
 		58E63DAD2296DBAF008AB4A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
-		58E63DB1229D5BA4008AB4A2 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		772E3E69229483E600E1ADCA /* ChoiceInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceInterfaceController.swift; sourceTree = "<group>"; };
 		7738D9CC22946AEB001852EA /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		77AC1DF52292FAE80019A23F /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -169,7 +169,6 @@
 				77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */,
 				580063DA2292C66C000C4E67 /* MusicProvider.swift */,
 				580063DC2292C83A000C4E67 /* MusicPlayer.swift */,
-				58E63DB1229D5BA4008AB4A2 /* HealthKitManager.swift */,
 			);
 			path = Watchill;
 			sourceTree = "<group>";
@@ -340,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D53CA8B229C587D00AE1560 /* Song in Resources */,
 				0D0480B42284696C000A2399 /* Assets.xcassets in Resources */,
 				0D0480B22284696C000A2399 /* Interface.storyboard in Resources */,
 			);
@@ -350,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0480C42284696D000A2399 /* Assets.xcassets in Resources */,
+				0D53CA8C229C587D00AE1560 /* Song in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +369,6 @@
 				7738D9CE22946C43001852EA /* WatchSessionManager.swift in Sources */,
 				580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */,
 				77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */,
-				58E63DB2229D5BA4008AB4A2 /* HealthKitManager.swift in Sources */,
 				0D04809D2284696B000A2399 /* AppDelegate.swift in Sources */,
 				77AC1DFE2292FAE80019A23F /* Contact.swift in Sources */,
 			);

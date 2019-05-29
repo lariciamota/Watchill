@@ -74,7 +74,7 @@
             <objects>
                 <controller spacing="4" id="bt2-IO-yag">
                     <items>
-                        <label width="1" height="25" alignment="left" textAlignment="center" id="uJL-rG-OcH">
+                        <label width="1" height="25" alignment="left" text="batata" textAlignment="center" id="uJL-rG-OcH">
                             <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
                         <button width="32" height="32" alignment="center" verticalAlignment="bottom" backgroundImage="icons8-shuffle-filled-100" id="h0h-Gj-6zJ"/>

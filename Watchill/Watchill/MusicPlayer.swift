@@ -10,6 +10,7 @@ public class MusicPlayer {
     var audioPlayer = AVAudioPlayer()
     var shuffle_on = false
     var played_musics:[Int] = []
+    var musicIsPlaying = false
     
     
     func lastMusic() {
@@ -23,6 +24,10 @@ public class MusicPlayer {
             self.setMusic(music_index: music_index)
         }
         
+        if self.musicIsPlaying {
+            self.playMusic()
+        }
+
     }
     
     func setPlaylist(playlist:[String]) {
@@ -47,12 +52,16 @@ public class MusicPlayer {
         
         self.setMusic(music_index: self.actual_music)
         
+        if self.musicIsPlaying {
+            self.playMusic()
+        }
+        
         if (self.played_musics.count > 10){
             self.played_musics.removeFirst()
         }
     }
     
-    func setMusic(music_index:Int) {
+    func setMusic(music_index:Int){
         
         if self.played_musics.last != self.actual_music {
             self.played_musics.append(self.actual_music)
@@ -69,10 +78,12 @@ public class MusicPlayer {
     
     func playMusic(){
         self.audioPlayer.play()
+        self.musicIsPlaying = true
     }
     
     func stopMusic(){
         self.audioPlayer.stop()
+        self.musicIsPlaying = false
     }
     
     func shuffle(){
