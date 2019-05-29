@@ -92,29 +92,34 @@ class HealthKitManager {
             DispatchQueue.main.async {
                 /// Converting the heart rate to bpm
                 let heartRateUnit = HKUnit(from: "count/min")
+                //valor do batimento, está vindo igual !?
                 let heartRate = sample.quantity.doubleValue(for: heartRateUnit)
-                
-                let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
-                let hearRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: heartRate)
-                let heartSample = HKQuantitySample(type: heartRateType, quantity: hearRateQuantity, start: Date.distantPast, end: Date.distantFuture)
-                
-                //healthKitStore.save(heartSample)
+
+                //pode se utilizar este valor para enviar pra alguma classe ou pode ser pego o valor direto no app saude, pois eu ja salvo diretamente la
                 
                 self.saveHeartData(heartValue: heartRate)
                 /// Updating the UI with the retrieved value
                 //self?.heartRateLabel.setText("\(Int(heartRate))")
+                
+                //tentei printar os dados, mas quando rodei no iphone nao aparece nada no console, pq?
                 print("Double: \(heartRate) \n Int: \(Int(heartRate))")
                 
             }
         }
         
     }
-    //salvar os dados verdadeiros
+    
+    
+    //salvar os dados verdadeiros no app saude do iphone
     static func saveHeartData(heartValue: Double){
+        //identificador para batimentos
         let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
+        //cria o tipo bpm com o valor double
         let hearRateQuantity = HKQuantity(unit: HKUnit(from: "count/min"), doubleValue: heartValue)
-        let heartSample = HKQuantitySample(type: heartRateType, quantity: hearRateQuantity, start: Date.distantPast, end: Date.distantFuture)
+        //cria o objeto que vai ser salvado no app saude
+        let heartSample = HKQuantitySample(type: heartRateType, quantity: hearRateQuantity, start: NSDate() as Date, end: NSDate() as Date)
         
+        //salva no app saude
         healthKitStore.save(heartSample) { (success, error) in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
