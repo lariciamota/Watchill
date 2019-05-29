@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5cD-u1-UT0">
-    <device id="watch40" orientation="portrait">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,7 +26,7 @@
                         <label width="1" height="25" alignment="left" text="Precisa de ajuda?" textAlignment="center" id="cTI-WT-Gx5">
                             <color key="textColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
-                        <button width="1" alignment="left" verticalAlignment="center" title="Sim" id="auV-FN-eeZ">
+                        <button width="1" alignment="center" verticalAlignment="center" title="Sim" id="auV-FN-eeZ">
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -74,7 +74,7 @@
             <objects>
                 <controller spacing="4" id="bt2-IO-yag">
                     <items>
-                        <label width="1" height="25" alignment="left" text="batata" textAlignment="center" id="uJL-rG-OcH">
+                        <label width="1" height="25" alignment="left" textAlignment="center" id="uJL-rG-OcH">
                             <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
                         <button width="32" height="32" alignment="center" verticalAlignment="bottom" backgroundImage="icons8-shuffle-filled-100" id="h0h-Gj-6zJ"/>
