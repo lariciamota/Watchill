@@ -69,20 +69,36 @@
             </objects>
             <point key="canvasLocation" x="346" y="50"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Music Interface Controller-->
         <scene sceneID="6XT-ld-TS6">
             <objects>
-                <controller spacing="4" id="bt2-IO-yag">
+                <controller spacing="4" id="bt2-IO-yag" customClass="MusicInterfaceController" customModule="Watchill_WatchKit_Extension">
                     <items>
                         <label width="1" height="25" alignment="left" textAlignment="center" id="uJL-rG-OcH">
                             <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </label>
-                        <button width="32" height="32" alignment="center" verticalAlignment="bottom" backgroundImage="icons8-shuffle-filled-100" id="h0h-Gj-6zJ"/>
+                        <button width="32" height="32" alignment="center" verticalAlignment="bottom" backgroundImage="icons8-shuffle-filled-100" id="h0h-Gj-6zJ">
+                            <connections>
+                                <action selector="shuffleMusic" destination="bt2-IO-yag" id="A0k-je-k7f"/>
+                            </connections>
+                        </button>
                         <group width="1" alignment="left" verticalAlignment="center" id="Azr-bz-3aN">
                             <items>
-                                <button width="42" height="47" alignment="left" verticalAlignment="center" backgroundImage="icons8-rewind-64" id="Z9W-W1-quJ"/>
-                                <button width="72" height="74" alignment="left" verticalAlignment="center" backgroundImage="icons8-play-button-circled-100" id="2Kg-yv-MrJ"/>
-                                <button width="42" height="47" alignment="left" verticalAlignment="center" backgroundImage="icons8-fast-forward-64" id="HVR-D3-QO8"/>
+                                <button width="42" height="47" alignment="left" verticalAlignment="center" backgroundImage="icons8-rewind-64" id="Z9W-W1-quJ">
+                                    <connections>
+                                        <action selector="goPrevious" destination="bt2-IO-yag" id="2eU-gy-bdr"/>
+                                    </connections>
+                                </button>
+                                <button width="72" height="74" alignment="left" verticalAlignment="center" backgroundImage="icons8-play-button-circled-100" id="2Kg-yv-MrJ">
+                                    <connections>
+                                        <action selector="playMusic" destination="bt2-IO-yag" id="7fq-oG-WBq"/>
+                                    </connections>
+                                </button>
+                                <button width="42" height="47" alignment="left" verticalAlignment="center" backgroundImage="icons8-fast-forward-64" id="HVR-D3-QO8">
+                                    <connections>
+                                        <action selector="goNext" destination="bt2-IO-yag" id="9VT-vI-YeO"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>

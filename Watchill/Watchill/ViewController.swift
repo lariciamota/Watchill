@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var musicTableView: UITableView!
 
+    var watchCommand = 0
     let favorite = Defaults.shared
     lazy var healthKitStore = HKHealthStore()
     var connectivityHandler = WatchSessionManager.shared
@@ -57,6 +58,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.lockedSymbol.isHidden = self.music_player.isUnlocked(music_index: indexPath.row)
         
         return cell
+    }
+    
+    func receiveCommand(){
+        switch self.watchCommand{
+        case 0:
+            self.music_player.playMusic()
+        case 1:
+            self.music_player.stopMusic()
+        case 2:
+            self.music_player.nextMusic()
+        case 3:
+            self.music_player.lastMusic()
+        case 4:
+            self.music_player.shuffle()
+        default: break
+            
+        }
     }
     
     @IBOutlet weak var playingButtonOutlet: UIButton!
@@ -171,6 +189,10 @@ extension ViewController: iOSDelegate {
             print("pedido recebido")
             let msg = [contact: [self.favorite.contacts[0].name, self.favorite.contacts[0].phone]]
             reply(msg)
+        } else if let command = tuple.message["command"] as? Int {
+            print("comando recebido")
+            self.watchCommand = command
+            self.receiveCommand()
         }
     }
     

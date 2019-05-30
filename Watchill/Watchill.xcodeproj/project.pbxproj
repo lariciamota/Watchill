@@ -34,6 +34,7 @@
 		77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */; };
 		77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */; };
 		77FE4715229F48D40049E504 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE4714229F48D40049E504 /* MusicTableViewCell.swift */; };
+		BB5AF872229FEC6D00A8D816 /* MusicInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF871229FEC6D00A8D816 /* MusicInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContactsViewController.swift; sourceTree = "<group>"; };
 		77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherFavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		77FE4714229F48D40049E504 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
+		BB5AF871229FEC6D00A8D816 /* MusicInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInterfaceController.swift; sourceTree = "<group>"; };
 		E81B296C229435870085E9AD /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		E81B296D229435870085E9AD /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +197,7 @@
 				0D0480C32284696D000A2399 /* Assets.xcassets */,
 				0D0480C52284696D000A2399 /* Info.plist */,
 				772E3E69229483E600E1ADCA /* ChoiceInterfaceController.swift */,
+				BB5AF871229FEC6D00A8D816 /* MusicInterfaceController.swift */,
 			);
 			path = "Watchill WatchKit Extension";
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			files = (
 				0D0480C22284696C000A2399 /* ExtensionDelegate.swift in Sources */,
 				7738D9CD22946AEB001852EA /* WatchSessionManager.swift in Sources */,
+				BB5AF872229FEC6D00A8D816 /* MusicInterfaceController.swift in Sources */,
 				772E3E6A229483E600E1ADCA /* ChoiceInterfaceController.swift in Sources */,
 				0D0480C02284696C000A2399 /* InterfaceController.swift in Sources */,
 			);
