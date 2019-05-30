@@ -33,6 +33,7 @@
 		77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */; };
 		77FE4715229F48D40049E504 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE4714229F48D40049E504 /* MusicTableViewCell.swift */; };
 		BB5AF872229FEC6D00A8D816 /* MusicInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5AF871229FEC6D00A8D816 /* MusicInterfaceController.swift */; };
+		BB63D40822A0050700F5BC6E /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB63D40722A0050700F5BC6E /* HealthKitManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherFavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		77FE4714229F48D40049E504 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		BB5AF871229FEC6D00A8D816 /* MusicInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicInterfaceController.swift; sourceTree = "<group>"; };
+		BB63D40722A0050700F5BC6E /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		E81B296C229435870085E9AD /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		E81B296D229435870085E9AD /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +158,7 @@
 		0D04809B2284696B000A2399 /* Watchill */ = {
 			isa = PBXGroup;
 			children = (
+				BB63D40722A0050700F5BC6E /* HealthKitManager.swift */,
 				58E63DA72296D724008AB4A2 /* Watchill.entitlements */,
 				77AC1DF72292FAE80019A23F /* Contact.swift */,
 				0D04809C2284696B000A2399 /* AppDelegate.swift */,
@@ -365,6 +368,7 @@
 			files = (
 				580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */,
 				77AC1DFD2292FAE80019A23F /* FavoriteTableViewCell.swift in Sources */,
+				BB63D40822A0050700F5BC6E /* HealthKitManager.swift in Sources */,
 				0D04809F2284696B000A2399 /* ViewController.swift in Sources */,
 				77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */,
 				77AC1DFC2292FAE80019A23F /* Defaults.swift in Sources */,

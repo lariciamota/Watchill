@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     override func viewDidAppear(_ animated: Bool) {
         if HKHealthStore.isHealthDataAvailable(){
-            authorizeHealthKit()
+            HealthKitManager.authorizeHealthKit()
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
