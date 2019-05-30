@@ -15,6 +15,7 @@ class ViewController: UIViewController{
     lazy var healthKitStore = HKHealthStore()
     var connectivityHandler = WatchSessionManager.shared
     let contact = "contact"
+    var watchCommand = 0
     
     override func viewDidAppear(_ animated: Bool) {
         if HKHealthStore.isHealthDataAvailable(){
@@ -35,6 +36,21 @@ class ViewController: UIViewController{
         cell.textLabel?.text = self.music_provider.musicsList()[indexPath.row]
         
         return cell
+    }
+
+    func receiveCommand(){
+        switch self.watchCommand{
+            case 0:
+                self.music_player.playMusic()
+            case 1:
+                self.music_player.stopMusic()
+            case 2:
+                self.music_player.nextMusic()
+            case 3:
+                self.music_player.lastMusic()
+            case 4:
+                self.music_player.shuffle()
+            }
     }
     
     @IBOutlet weak var tableViewCell: UITableViewCell!
@@ -135,5 +151,19 @@ extension ViewController: iOSDelegate {
             reply(msg)
         }
     }
+
+    // FUNÇÃO PARA RECEBER COMANDO DO WATCH COMO NUMBERO INTEIRO E CHAMAR A FUNÇÃO CORRESPONDENTE DO MUSIC PLAYER
+    func commandReceived(tuple: commandReceived) {
+        guard let reply = tuple.replyHandler else {
+            return
+        }
+        
+        if let command = tuple.message["command"] as? Int {
+            print("comando recebido")
+            self.watchCommand = command[1]
+            self.receiveCommand()
+        }
+    }
+
     
 }

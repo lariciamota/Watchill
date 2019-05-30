@@ -16,6 +16,7 @@ class InterfaceController: WKInterfaceController {
     let contact = "contact"
     var name = ""
     var phone = ""
+    var watchCommand = 0
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -44,6 +45,13 @@ class InterfaceController: WKInterfaceController {
             self.phone = data[1]
             print(self.name)}, errorHandler: { (error) in print(error)} )
     }
+    // FUNÇÃO PARA ENVIAR O COMANDO DO WATCH. FALTA ASSOCIAR OS BOTÕES DO STORYBOARD À INTERFACECONTROLLER
+    // E PRA CADA BOTÃO MUDAR A VARIÁVEL self.watchCommand PARA O VALOR CORRESPONDENTE 
+    func sendCommand(command: Int){
+        print("enviando comando")
+        connectivityHandler.sendMessage(message: command)
+    }
+
     
     override func contextForSegue(withIdentifier segueIdentifier: String) -> Any? {
         if segueIdentifier == "ChoiceController" {
