@@ -24,7 +24,7 @@ public class MusicPlayer {
             self.setMusic(music_index: music_index)
         }
         
-        if self.musicIsPlaying {
+        if self.musicIsPlaying && isUnlocked(music_index: self.actual_music){
             self.playMusic()
         }
 
@@ -52,7 +52,7 @@ public class MusicPlayer {
         
         self.setMusic(music_index: self.actual_music)
         
-        if self.musicIsPlaying {
+        if self.musicIsPlaying && isUnlocked(music_index: self.actual_music){
             self.playMusic()
         }
         
@@ -62,6 +62,7 @@ public class MusicPlayer {
     }
     
     func setMusic(music_index:Int){
+        self.actual_music = music_index
         
         if self.played_musics.last != self.actual_music {
             self.played_musics.append(self.actual_music)
@@ -102,4 +103,7 @@ public class MusicPlayer {
         }
     }
     
+    func isUnlocked(music_index: Int) -> Bool {
+        return (music_index != (self.musics_to_play.count - 1)) && (music_index != self.musics_to_play.count - 2)
+    }
 }

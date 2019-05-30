@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YLD-x2-STB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -99,35 +99,42 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W2i-56-UQf">
                                                 <rect key="frame" x="0.0" y="652" width="375" height="348"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="separatorColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="sectionIndexBackgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="gUw-x8-7Iy">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="musicNameCell" rowHeight="64" id="gUw-x8-7Iy" customClass="MusicTableViewCell" customModule="Watchill" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="375" height="64"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gUw-x8-7Iy" id="57a-Dr-WNp">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="63.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="batata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzT-k6-67J">
-                                                                    <rect key="frame" x="15" y="0.0" width="49" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Musica" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzT-k6-67J">
+                                                                    <rect key="frame" x="15" y="21" width="345" height="21"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="potato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dx7-2e-FUZ">
-                                                                    <rect key="frame" x="14" y="32" width="50" height="21"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-cadeado-2-26" translatesAutoresizingMaskIntoConstraints="NO" id="gx2-no-bPU">
+                                                                    <rect key="frame" x="335" y="17" width="25" height="28"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
+                                                                </imageView>
                                                             </subviews>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="lockedSymbol" destination="gx2-no-bPU" id="y4V-5N-ojp"/>
+                                                            <outlet property="musicLabel" destination="GzT-k6-67J" id="hs9-ni-nGw"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contatos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-49-WVm">
+                                                <rect key="frame" x="327" y="526" width="44" height="12"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <color key="textColor" red="0.1529411765" green="0.41960784309999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -177,8 +184,8 @@
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="musicPlayingLabel" destination="XVa-ZP-mxV" id="nhl-kd-Shy"/>
+                        <outlet property="musicTableView" destination="W2i-56-UQf" id="s5R-UK-gdT"/>
                         <outlet property="playingButtonOutlet" destination="Lbi-wQ-m7c" id="PWk-1K-BUC"/>
-                        <outlet property="tableView" destination="W2i-56-UQf" id="s5R-UK-gdT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8me-mt-kLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,10 +309,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Phone" width="153.19148254394531" height="153.19148254394531"/>
-        <image name="icons8-fast-forward-64" width="153.60000610351562" height="153.60000610351562"/>
-        <image name="icons8-play-button-circled-100" width="153.19148254394531" height="153.19148254394531"/>
-        <image name="icons8-rewind-64" width="153.60000610351562" height="153.60000610351562"/>
+        <image name="Phone" width="100" height="100"/>
+        <image name="icons8-cadeado-2-26" width="26" height="26"/>
+        <image name="icons8-fast-forward-64" width="64" height="64"/>
+        <image name="icons8-play-button-circled-100" width="100" height="100"/>
+        <image name="icons8-rewind-64" width="64" height="64"/>
         <image name="logo" width="216" height="230"/>
     </resources>
 </document>

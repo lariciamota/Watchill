@@ -33,6 +33,7 @@
 		77AC1DFE2292FAE80019A23F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF72292FAE80019A23F /* Contact.swift */; };
 		77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */; };
 		77AC1E002292FAE80019A23F /* OtherFavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */; };
+		77FE4715229F48D40049E504 /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FE4714229F48D40049E504 /* MusicTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		77AC1DF72292FAE80019A23F /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		77AC1DF82292FAE80019A23F /* FavoriteContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteContactsViewController.swift; sourceTree = "<group>"; };
 		77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherFavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		77FE4714229F48D40049E504 /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		E81B296C229435870085E9AD /* PoiretOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PoiretOne-Regular.ttf"; sourceTree = "<group>"; };
 		E81B296D229435870085E9AD /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 				77AC1DF92292FAE80019A23F /* OtherFavoritesTableViewCell.swift */,
 				580063DA2292C66C000C4E67 /* MusicProvider.swift */,
 				580063DC2292C83A000C4E67 /* MusicPlayer.swift */,
+				77FE4714229F48D40049E504 /* MusicTableViewCell.swift */,
 			);
 			path = Watchill;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */,
 				77AC1DFF2292FAE80019A23F /* FavoriteContactsViewController.swift in Sources */,
 				0D04809D2284696B000A2399 /* AppDelegate.swift in Sources */,
+				77FE4715229F48D40049E504 /* MusicTableViewCell.swift in Sources */,
 				77AC1DFE2292FAE80019A23F /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
