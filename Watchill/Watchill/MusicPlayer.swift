@@ -24,7 +24,7 @@ public class MusicPlayer {
             self.setMusic(music_index: music_index)
         }
         
-        if self.musicIsPlaying && isUnlocked(music_index: self.actual_music){
+        if self.musicIsPlaying {
             self.playMusic()
         }
 
@@ -52,7 +52,7 @@ public class MusicPlayer {
         
         self.setMusic(music_index: self.actual_music)
         
-        if self.musicIsPlaying && isUnlocked(music_index: self.actual_music){
+        if self.musicIsPlaying {
             self.playMusic()
         }
         
@@ -78,8 +78,12 @@ public class MusicPlayer {
     }
     
     func playMusic(){
-        self.audioPlayer.play()
-        self.musicIsPlaying = true
+        if(isUnlocked(music_index: self.actual_music)){
+            self.audioPlayer.play()
+            self.musicIsPlaying = true
+        } else {
+            stopMusic()
+        }
     }
     
     func stopMusic(){

@@ -82,11 +82,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func nextMusicButton(_ sender: Any) {
         self.music_player.nextMusic()
         musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music].components(separatedBy: ".mp3")[0]
+        
+        if (!self.music_player.musicIsPlaying){
+            self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+        } else {
+            self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
+        }
     }
     
     @IBAction func lastMusicButton(_ sender: Any) {
         self.music_player.lastMusic()
         musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music].components(separatedBy: ".mp3")[0]
+        
+        if (!self.music_player.musicIsPlaying){
+            self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+        } else {
+            self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
+        }
     }
     
     
