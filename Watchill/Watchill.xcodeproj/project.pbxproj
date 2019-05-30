@@ -20,8 +20,6 @@
 		0D0480C22284696C000A2399 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0480C12284696C000A2399 /* ExtensionDelegate.swift */; };
 		0D0480C42284696D000A2399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D0480C32284696D000A2399 /* Assets.xcassets */; };
 		0D53CA8A229C587D00AE1560 /* Song in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CA89229C587D00AE1560 /* Song */; };
-		0D53CA8B229C587D00AE1560 /* Song in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CA89229C587D00AE1560 /* Song */; };
-		0D53CA8C229C587D00AE1560 /* Song in Resources */ = {isa = PBXBuildFile; fileRef = 0D53CA89229C587D00AE1560 /* Song */; };
 		580063DB2292C66C000C4E67 /* MusicProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DA2292C66C000C4E67 /* MusicProvider.swift */; };
 		580063DD2292C83A000C4E67 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580063DC2292C83A000C4E67 /* MusicPlayer.swift */; };
 		58E63DAE2296DBAF008AB4A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E63DAD2296DBAF008AB4A2 /* HealthKit.framework */; };
@@ -345,7 +343,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D53CA8B229C587D00AE1560 /* Song in Resources */,
 				0D0480B42284696C000A2399 /* Assets.xcassets in Resources */,
 				0D0480B22284696C000A2399 /* Interface.storyboard in Resources */,
 			);
@@ -356,7 +353,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0480C42284696D000A2399 /* Assets.xcassets in Resources */,
-				0D53CA8C229C587D00AE1560 /* Song in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

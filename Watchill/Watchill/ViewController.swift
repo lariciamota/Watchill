@@ -10,16 +10,17 @@ import UIKit
 import WatchConnectivity
 import HealthKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, WCSessionDelegate{
     
     @IBOutlet weak var musicTableView: UITableView!
 
     var watchCommand = 0
     let favorite = Defaults.shared
     lazy var healthKitStore = HKHealthStore()
-    var connectivityHandler = WatchSessionManager.shared
+//    var connectivityHandler = WatchSessionManager.shared
     let contact = "contact"
-    
+    let sessao = WCSession.default
+
     override func viewDidAppear(_ animated: Bool) {
         if HKHealthStore.isHealthDataAvailable(){
             authorizeHealthKit()
@@ -64,12 +65,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         switch self.watchCommand{
         case 0:
             self.music_player.playMusic()
+            if (!self.music_player.musicIsPlaying){
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+            } else {
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
+            }
+            musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music].components(separatedBy: ".mp3")[0]
         case 1:
             self.music_player.stopMusic()
+            if (!self.music_player.musicIsPlaying){
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+            } else {
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
+            }
         case 2:
             self.music_player.nextMusic()
+            if (!self.music_player.musicIsPlaying){
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+            } else {
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
+            }
+            musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music].components(separatedBy: ".mp3")[0]
         case 3:
             self.music_player.lastMusic()
+            if (!self.music_player.musicIsPlaying){
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-play-button-circled-100"), for: .normal)
+            } else {
+                self.playingButtonOutlet.setImage(UIImage(named: "icons8-pause-button-100"), for: .normal)
+            }
+            musicPlayingLabel.text = self.music_player.playlist[self.music_player.actual_music].components(separatedBy: ".mp3")[0]
         case 4:
             self.music_player.shuffle()
         default: break
@@ -135,19 +159,55 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.music_player.setPlaylist(playlist: self.music_provider.musicsList())
         self.music_player.setMusic(music_index: 0)
-        connectivityHandler.iOSDelegate = self
+//        connectivityHandler.iOSDelegate = self
         
         for music in self.music_provider.musicsList(){
             print(music)
+        }
+        
+        ativarConexao()
+
+    }
+    
+    func ativarConexao(){
+        if(WCSession.isSupported()){
+            self.sessao.delegate = self
+            sessao.activate()
         }
     }
 
     func sendContact(){
         print("enviando contato")
         let msg = [contact: [self.favorite.contacts[0].name, self.favorite.contacts[0].phone]]
-        connectivityHandler.sendMessage(message: msg, replyHandler: { (resposta) in print(resposta)}, errorHandler: { (error) in print(error)} )
+        self.sessao.sendMessage(msg, replyHandler: { (resposta) in print(resposta)}, errorHandler: { (error) in print(error)} )
     }
     
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationState")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("sessionDidBecomeInactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        print("sessionDidDeactivate")
+    }
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
+        if let commandRecebido = message["command"] as? Int {
+            DispatchQueue.main.async {
+                self.watchCommand = commandRecebido
+                self.receiveCommand()
+            }
+            let mensagemVolta = ["mensagem": "Chegou!!"]
+            replyHandler(mensagemVolta)
+        } else if let _ = message["get_contact"] as? Bool {
+            print("pedido recebido")
+            let msg = [contact: [self.favorite.contacts[0].name, self.favorite.contacts[0].phone]]
+            replyHandler(msg)
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = ""

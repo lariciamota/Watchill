@@ -10,35 +10,53 @@ import WatchKit
 import Foundation
 import WatchConnectivity
 
-class InterfaceController: WKInterfaceController {
-    var connectivityHandler = WatchSessionManager.shared
-    var session : WCSession?
+class InterfaceController: WKInterfaceController, WCSessionDelegate {
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+//    var connectivityHandler = WatchSessionManager.shared
+//    var session : WCSession?
     let contact = "contact"
     var name = ""
     var phone = ""
-    
+    let sessao = WCSession.default
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+        ativarConexao()
         // Configure interface objects here.
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-            connectivityHandler.watchOSDelegate = self
+//            connectivityHandler.watchOSDelegate = self
+        sendRequest()
+    }
+    
+    @IBAction func yesButton() {
         sendRequest()
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+        sendRequest()
+
+    }
+    
+    func ativarConexao(){
+        if(WCSession.isSupported()){
+            self.sessao.delegate = self
+            sessao.activate()
+        }
     }
     
     func sendRequest(){
         print("enviando pedido")
         let msg = ["get_contact": true]
-        connectivityHandler.sendMessage(message: msg, replyHandler: { (resposta) in
+        self.sessao.sendMessage(msg, replyHandler: { (resposta) in
             let data = resposta[self.contact] as! [String]
             self.name = data[0]
             self.phone = data[1]

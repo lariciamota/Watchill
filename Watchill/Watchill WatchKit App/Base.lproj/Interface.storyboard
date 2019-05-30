@@ -30,6 +30,7 @@
                             <color key="titleColor" red="0.94844931359999995" green="0.94989019630000004" blue="0.88234311340000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="backgroundColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
+                                <action selector="yesButton" destination="5cD-u1-UT0" id="879-Hs-9zR"/>
                                 <segue destination="AYe-6T-ycL" kind="push" identifier="ChoiceController" id="pNg-Ub-5br"/>
                             </connections>
                         </button>
@@ -74,9 +75,6 @@
             <objects>
                 <controller spacing="4" id="bt2-IO-yag" customClass="MusicInterfaceController" customModule="Watchill_WatchKit_Extension">
                     <items>
-                        <label width="1" height="25" alignment="left" textAlignment="center" id="uJL-rG-OcH">
-                            <color key="textColor" red="0.2305796742" green="0.41516125199999998" blue="0.44706577060000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </label>
                         <button width="32" height="32" alignment="center" verticalAlignment="bottom" backgroundImage="icons8-shuffle-filled-100" id="h0h-Gj-6zJ">
                             <connections>
                                 <action selector="shuffleMusic" destination="bt2-IO-yag" id="A0k-je-k7f"/>
